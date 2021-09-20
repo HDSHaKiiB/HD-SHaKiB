@@ -1,3 +1,0 @@
-# HD-SHaKiB
-
-cd GhOsToFKiinG
